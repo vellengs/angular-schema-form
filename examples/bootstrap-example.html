@@ -45,7 +45,7 @@
   }
 
   .alert .form-group {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .red {
@@ -267,7 +267,7 @@ app.controller('TestCtrl', function($scope, $http, $location) {
       $scope.loadedData = {
         created: moment(res.created_at).fromNow(),
         user: res.user !== null ? res.user.login : 'Anonymous'
-      }
+      };
       $scope.loading = false;
       $scope.schemaJson = res.files['schema.json'].content;
       $scope.formJson   = res.files['form.json'].content;
